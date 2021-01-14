@@ -65,3 +65,6 @@ function player(mark) {
   const tilesPlayed = [];
   return {mark, tilesPlayed};
 }
+
+document.querySelector('#restart')
+  .addEventListener('click', () => window.location.reload());

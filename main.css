@@ -1,0 +1,92 @@
+/* global css reset */
+
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --x: #4d79ff;
+  --o: #ff6666;
+}
+
+/* top text */
+* {
+  font-family: 'Bowlby One SC', sans-serif;
+}
+
+body {
+  background-color: #09c33e;
+}
+
+h1 {
+  text-align: center;
+  font-size: 8rem;
+}
+
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* global game board */
+
+#gameBoard {
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.gameTile {
+  background-color: #056e23;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.gameTile:hover {
+  background-color: #034917;
+}
+
+/* played tiles */
+
+.played {
+  pointer-events: none;
+}
+
+.disabled {
+  display: none;
+}
+
+.X {
+  background-color: var(--x);
+}
+
+.O {
+  background-color: var(--o);
+}
+
+.X::after {
+  content: 'X';
+}
+
+.O::after {
+  content: 'O';
+}
+
+.X::after, .O::after {
+  font-size: 4rem;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
